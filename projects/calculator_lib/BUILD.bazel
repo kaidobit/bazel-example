@@ -1,0 +1,11 @@
+py_test(
+    name = "calculator_lib_test",
+    srcs = ["calculator_lib_test.py"],
+    deps = ["//projects/calculator_lib:calculator_lib"],
+)
+
+py_library(
+  name = "calculator_lib",
+  srcs = ["calculator_lib.py"],
+  visibility = ["//visibility:public"],
+)
