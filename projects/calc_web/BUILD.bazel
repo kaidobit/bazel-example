@@ -1,0 +1,14 @@
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+
+nodejs_binary(
+    name = "calc_web",
+    entry_point = ":index.js",
+    data = [
+      "//projects/calc",
+      "@npm//express"
+    ],
+    templated_args = [
+        "--nobazel_run_linker",
+        "--nobazel_node_patches",
+    ],
+)

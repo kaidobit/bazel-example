@@ -10,3 +10,5 @@
 /.ijwb/
 /.aswb/
 /.clwb/
+
+node_modules/**

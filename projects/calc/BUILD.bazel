@@ -1,0 +1,16 @@
+load("@build_bazel_rules_nodejs//:index.bzl", "js_library")
+load("@npm//@bazel/jasmine:index.bzl", "jasmine_node_test")
+
+js_library(
+    name = "calc",
+    srcs = ["calc.js"],
+    visibility = ["//projects/calc_web:__pkg__"],
+)
+
+jasmine_node_test(
+    name = "calc_test",
+    srcs = ["calc.spec.js"],
+    data = [
+      ":calc",
+    ]
+)
