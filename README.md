@@ -23,6 +23,9 @@ run:
 
 ### nodejs
 
+npm install:
+`bazel run @yarn//:yarn`
+
 add dep and update lock:
 `bazel run @yarn//:yarn -- add <package>`
 
